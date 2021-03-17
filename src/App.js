@@ -68,6 +68,10 @@ function App() {
   }
 
   const deleter = () => {
+    if(typeof equation === "number"){
+      setAnswer("");
+      setEquation("")
+    }
     setEquation(prev => prev.split("").slice(0, prev.length-1).join(""))
   }
 
